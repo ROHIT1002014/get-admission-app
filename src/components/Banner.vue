@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-carousel v-model="model">
+    <v-carousel v-model="model" height="450">
       <v-carousel-item
         v-for="(color, i) in colors"
         :key="color"
@@ -20,6 +20,9 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
+    <v-card>
+      <v-card-title> <v-icon>mdi-account</v-icon> </v-card-title>
+    </v-card>
   </div>
 </template>
 <script>

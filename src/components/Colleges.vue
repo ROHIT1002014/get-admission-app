@@ -1,10 +1,10 @@
 <template>
 <v-container fluid>
-  <v-row dense>
+  <v-row dense justify="space-between">
     <v-col v-for="i in 5" :key="i" cols="2">
-      <v-card>
+      <v-card flat hover>
         <v-img
-          class="white--text align-end"
+          class="white--text align-center"
           height="200px"
           src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
         >
@@ -32,6 +32,29 @@
             Explore
           </v-btn>
         </v-card-actions>
+        </v-img>
+      </v-card>
+    </v-col>
+    <v-col cols="2" class="my-auto">
+      <v-card flat hover class="ml-5 d-inline-block">
+        <v-img
+          class="white--text align-center"
+          width="100"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        >
+          <v-card-text @click="$router.push({ path: '/about'})" class="white--text headline  font-weight-bold">
+            <p>
+              More
+            </p>
+            <v-icon
+              color="white"
+              class=""
+              justify-center
+              large
+            >
+              mdi-chevron-double-right
+            </v-icon>
+          </v-card-text>
         </v-img>
       </v-card>
     </v-col>
